@@ -1,8 +1,6 @@
-Os arquivos da pasta **Trial1** foram da primeira tentativa de realizar o curso.
+﻿Neste projeto conceito não há sequer a presença de um arquivo JavaScript.
 
-Os arquivos da pasta **running** são os que efetivamente fazem parte do projeto deposto.
-
-Há uma pasta node_modules que foi upada quando ainda não tinha conhecimento do **gitignore**.
+Tudo foi codado usando apenas CSS3 sem nenhum Framework ou Librarie.
 
 O projeto é bem parecido com o proposto em aula e tenho usado como base para outros projetos.
 
