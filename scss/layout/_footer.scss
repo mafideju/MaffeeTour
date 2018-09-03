@@ -18,6 +18,20 @@
     padding-top: 2rem;
     display: inline-block;
     margin-left: 5rem;
+
+    @include respond(mid-phone) {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    @include respond(extra-small) {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      float: none;
+      font-size: 1.8rem;
+    }
   }
 
   &__list {
@@ -26,6 +40,7 @@
 
   &__item {
     display: inline-block;
+    margin-top: 2rem;
 
     &:not(:last-child) {
       margin-right: 1.5rem;
@@ -54,5 +69,21 @@
     padding-top: 2rem;
     width: 80%;
     margin: 0 auto;
+
+    @include respond(tab-port) {
+      text-align: justify;
+    }
+
+    @include respond(mid-phone) {
+      font-size: 2rem;
+    }
+
+    @include respond(small-phone) {
+      width: 100%;
+      margin: 0;
+      float: none;
+      text-align: justify;
+      font-size: 1.75rem;
+    }
   }
 }
