@@ -5,12 +5,22 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url('../img/hero.jpg');
+    url('../img/hero-small.jpg');
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   position: relative;
+
+  @media screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    screen and (min-width: 112.5em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url('../img/hero.jpg');
+  }
 
   @include respond(tab-port) {
     height: 100vh;
@@ -22,17 +32,24 @@
     position: absolute;
     top: 4rem;
     left: 4rem;
+    @include respond(mid-phone) {
+      top: 5rem;
+      left: 4.5rem;
+    }
   }
 
   &__logo {
-    height: 3.5rem;
+    height: 5.5rem;
+    @include respond(mid-phone) {
+      height: 6rem;
+    }
   }
 
   &__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -25%);
     text-align: center;
   }
 }

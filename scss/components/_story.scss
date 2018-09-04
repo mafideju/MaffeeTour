@@ -11,17 +11,34 @@
   -webkit-clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
   clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem 4rem 4rem 7rem;
+  }
+
+  @include respond(mid-phone) {
+    font-size: 2rem;
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
     float: left;
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+    // -webkit-clip-path: circle(50% at 50% 50%);
+    // clip-path: circle(50% at 50% 50%);
     position: relative;
-
     transform: translateX(-3rem);
+    overflow: hidden;
+    border-radius: 50%;
+
+    // para browsers que não suportam o atributo de forma nativa
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      border-radius: none;
+    }
   }
 
   &__img {

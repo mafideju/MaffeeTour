@@ -17,8 +17,13 @@
     cursor: pointer;
 
     @include respond(tab-port) {
-      top: 4rem;
-      right: 4rem;
+      top: 3.5rem;
+      right: 3.5rem;
+    }
+
+    @include respond(mid-phone) {
+      height: 9rem;
+      width: 9rem;
     }
 
     @include respond(small-phone) {
@@ -93,6 +98,10 @@
       );
       background-size: 220%;
       transition: all 0.6s;
+      @include respond(mid-phone) {
+        margin-bottom: 1.5rem;
+        font-size: 3.5rem;
+      }
     }
     &:hover,
     &:active {
@@ -111,10 +120,13 @@
   &__icon {
     position: relative;
     margin-top: 3.5rem;
+    @include respond(mid-phone) {
+      margin-top: 4.2rem;
+    }
     &,
     &::before,
     &::after {
-      width: 3rem;
+      width: 4rem;
       height: 2px;
       background-color: $color-grey-dark-3;
       display: inline-block;

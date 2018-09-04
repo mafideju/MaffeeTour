@@ -9,12 +9,36 @@
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
+
+    @include respond(mid-phone) {
+      font-size: 2rem;
+      padding: 2rem 4rem;
+      margin-top: 0rem;
+    }
   }
 
   &--right {
     float: right;
-    margin: 1rem 2rem 0 0;
+    margin: -2.5rem 2rem 0 0;
+
+    @include respond(phone) {
+      margin: -2.5rem;
+    }
+    @include respond(mid-phone) {
+      margin: -1.5rem !important;
+      margin-top: 2.5rem !important;
+      font-size: 2rem;
+    }
+    @include respond(small-phone) {
+      margin: -6.5rem !important;
+      margin-top: 0rem !important;
+    }
+    @include respond(extra-small) {
+      margin: -5rem !important;
+      margin-top: 0.1rem !important;
+      font-size: 2rem;
+    }
   }
 
   &:hover {

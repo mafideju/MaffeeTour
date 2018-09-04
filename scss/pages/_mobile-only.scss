@@ -1,0 +1,11 @@
+.mobile-only {
+  display: none;
+
+  @include respond(tab-port) {
+    display: block;
+  }
+  @include respond(mid-phone) {
+    display: inline-block;
+    width: 80%;
+  }
+}

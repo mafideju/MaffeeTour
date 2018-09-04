@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
@@ -57,7 +58,7 @@
 
             <div class="row ">
                 <div class="col-1-of-2 ">
-                    <h3 class="heading-tertiary u-margin-bottom-small ">
+                    <h3 class="heading-tertiary u-margin-bottom-small">
                         Você vai se apaixonar pela Natureza
                     </h3>
                     <p class="paragraph ">
@@ -65,7 +66,7 @@
                         quisquam!
                     </p>
 
-                    <h3 class="heading-tertiary u-margin-bottom-small ">
+                    <h3 class="heading-tertiary u-margin-bottom-small">
                         Viva aventuras como nunca antes
                     </h3>
                     <p class="paragraph ">
@@ -77,9 +78,24 @@
                 </div>
                 <div class="col-1-of-2 ">
                     <div class="composition ">
-                        <img src="img/nat-1-large.jpg " alt="Photo 1 " class="composition__photo composition__photo--p1 ">
-                        <img src="img/nat-2-large.jpg " alt="Photo 2 " class="composition__photo composition__photo--p2 ">
-                        <img src="img/nat-3-large.jpg " alt="Photo 3 " class="composition__photo composition__photo--p3 ">
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" sizes="(max-width: 56.25em) 20vh, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 1 " class="composition__photo composition__photo--p1 " src="img/nat-1-large.jpg">
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" sizes="(max-width: 56.25em) 20vh, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 2 " class="composition__photo composition__photo--p2 " src="img/nat-2-large.jpg">
+                        <img srcset="img/nat-3.jpg 300w, img/nat-1-large.jpg 1000w" sizes="(max-width: 56.25em) 20vh, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 3 " class="composition__photo composition__photo--p3 " src="img/nat-3-large.jpg">
+                        <!-- <picture>
+                            <source srcset="img/nat-1.jpg 1x, img/nat-1-large.jpg 2x" media="(max-width: 37.5em)">
+                            <img srcset="img/nat-1.jpg 1x, img/nat-1-large.jpg 2x" alt="Photo 1 " class="composition__photo composition__photo--p1 ">
+                        </picture>
+                        <picture>
+                            <source srcset="img/nat-2.jpg 1x, img/nat-2-large.jpg 2x" media="(max-width: 37.5em)">
+                            <img srcset="img/nat-2.jpg 1x, img/nat-2-large.jpg 2x" alt="Photo 2 " class="composition__photo composition__photo--p2 ">
+                        </picture>
+                        <picture>
+                            <source srcset="img/nat-3.jpg 1x, img/nat-3-large.jpg 2x" media="(max-width: 37.5em)">
+                            <img srcset="img/nat-3.jpg 1x, img/nat-3-large.jpg 2x" alt="Photo 3 " class="composition__photo composition__photo--p3 ">
+                        </picture> -->
                     </div>
                 </div>
             </div>
@@ -130,6 +146,9 @@
                 <h2 class="heading-secondary ">
                     Destinos mais populares
                 </h2>
+                <h3 class="heading-tertiary mobile-only">
+                    Clique no card para ver as condições e fazer sua reserva
+                </h3>
             </div>
 
             <div class="row ">
@@ -256,7 +275,7 @@
                     </figure>
 
                     <div class="story__text u-margin-bottom-small ">
-                        <h3 class="heading-tertiary ">Vivi Momentos Inesquecíveis com Minha Familia</h3>
+                        <h3 class="heading-tertiary ">Vivi Grandes Momentos com Minha Familia</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat non voluptatem obcaecati incidunt
                             corporis maxime quam ex, quibusdam dolorum amet repellendus ratione aperiam minima. Quod ipsa
                             numquam eveniet nobis iure. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -273,7 +292,7 @@
                     </figure>
 
                     <div class="story__text u-margin-bottom-small ">
-                        <h3 class="heading-tertiary ">Fui muito bem atendido, recepcionado e acolhido pela Maffee</h3>
+                        <h3 class="heading-tertiary ">Fui muito bem atendido, guiado e acolhido pela Maffee</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat non voluptatem obcaecati incidunt
                             corporis maxime quam ex, quibusdam dolorum amet repellendus ratione aperiam minima. Quod ipsa
                             numquam eveniet nobis iure. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -292,7 +311,7 @@
                     <div class="book__form ">
                         <form action="# " class="form " id="form">
                             <div class="u-margin-bottom-small">
-                                <h2 class="heading-secondary ">Reservas</h2>
+                                <h2 class="heading-secondary ">Reservas | Duvidas</h2>
                             </div>
                             <div class="form__group ">
                                 <input type="text " class="form__input " id="name " placeholder="Nome " required>
@@ -303,7 +322,15 @@
                                 <label for="email " class="form__label ">E-Mail</label>
                             </div>
 
-                            <div class="form-group ">
+                            <div class="form__group">
+                                <textarea name="texto" id="texto" class="form__input form__text-area" placeholder="Conte-nos Sobre a Experiência que Procura!!"></textarea>
+                                <label for="texto " class="form__label ">Mensagem</label>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn--green btn--right ">Enviar &rarr;</button>
+                            </div>
+
+                            <!-- <div class="form-group ">
                                 <div class="form__radio-group ">
                                     <input type="radio " class="form__radio-input " id="small " name="size ">
                                     <label for="small " class="form__radio-label ">
@@ -319,10 +346,7 @@
                                         Grupos Empresariais
                                     </label>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn--green btn--right ">Próximo &rarr;</button>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                 </div>
